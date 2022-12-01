@@ -1,6 +1,98 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+.travel{
+    @extend .content-width;
+    @extend .mb-lg;
+
+    &__inner{
+        position: relative;
+        z-index: 0;
+        @extend .flex;
+        justify-content: space-between;
+        background-color: $cBgGray;
+        padding: 15px;
+
+        @include mq(md){
+            padding: 50px;
+        }
+        @include mq(xl){
+            padding: 50px 150px;
+        }
+    }
+    &__img{
+        height: 300px;
+        @extend .mb-sm;
+        box-shadow: inset 0 0 30px $cBlack;
+
+        @include mq(md) {
+            flex-basis: 47%;
+        }
+
+        @include mq(lg){
+            height: 400px;
+        }
+
+        & > img {
+            position: relative;
+            z-index: -1;
+            opacity: 1;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__texts{
+        @extend .pb-sm;
+
+        @include mq(md){
+            display: flex;
+            align-items: flex-end;
+            flex-basis: 47%;
+        }
+
+        &.inview{
+            & .travel__title::before{
+                @include animation($name:scaleX,$duration:0.3s,$delay:1s)
+            }
+        }
+    }
+    &__title{
+        position: relative;
+
+        &::before{
+            display: none;
+            content: "";
+            height: 1px;
+            width: 100px;
+            top: 50%;
+            left: -120px;
+            position: absolute;
+            background-color: $cBlack;
+            transform: scaleX(0);
+            transform-origin: right;
+
+            @include mq(lg){
+                display: block;
+            }
+        }
+    }
+    &__description{
+        @include mq(lg){
+            margin-bottom: 40px
+        }
+    }
+}
+
+@keyframes scaleX {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
 .houses {
   @extend .content-width;
   @extend .mb-lg;

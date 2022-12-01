@@ -51,8 +51,8 @@
         margin: 10px;
 
         @include mq(md){
-            margin-left: 0;
-            margin-right: 30px;
+            margin-left: 30px;
+            margin-right: 0;
         }
 
         & > a{
@@ -70,6 +70,10 @@
             justify-content: flex-start;
         }
     }
+}
+
+.hero{
+    @extend .pb-lg;
 }
 
 .travel{
@@ -301,5 +305,66 @@
 
     &__world{
         color: purple;
+    }
+}
+
+.side{
+    display: none;
+    position: fixed;
+    top: 70%;
+    transform: translateY(-50%);
+
+    @include mq(xl){
+        display: block;
+    }
+
+    & .tween-animate-title{
+        color: $cBlack;
+        text-decoration: none !important;
+        margin: 0 40px;
+        vertical-align: middle;
+        letter-spacing: 2px;
+    }
+
+    &.left{
+        left: 50px;
+
+        & .side__inner{
+            transform-origin: top left;
+            transform: rotate(-90deg);
+        }
+    }
+    &.right{
+        right: 50px;
+        top: 60%;
+
+        & .side__inner{
+            transform-origin: top right;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.icon{
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        width: 1em;
+        height: 1em;
+        background-position: center;
+        background-repeat: none;
+        background-size: contain;
+    }
+
+    &.twitter::before{
+        background-image: url(../../images/twitter.svg);
+    }
+    &.fb::before{
+        background-image: url(../../images/facebook.svg);
     }
 }

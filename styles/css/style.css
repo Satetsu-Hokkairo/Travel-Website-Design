@@ -877,15 +877,15 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm, .houses__title, .sub-title {
+.mb-sm, .houses__title, .popular__title, .sub-title {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .houses {
+.mb-lg, .houses, .popular__btn {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .houses {
+  .mb-lg, .houses, .popular__btn {
     margin-bottom: 150px !important;
   }
 }
@@ -903,13 +903,13 @@ img {
   }
 }
 
-.content-width, .houses {
+.content-width, .houses, .popular__header, .popular__container {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex, .houses__inner {
+.flex, .houses__inner, .popular__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -919,7 +919,7 @@ img {
           flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .houses__inner {
+  .flex, .houses__inner, .popular__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -947,11 +947,11 @@ img {
   }
 }
 
-.font-md {
+.font-md, .popular__title {
   font-size: 17px;
 }
 @media screen and (min-width: 960px) {
-  .font-md {
+  .font-md, .popular__title {
     font-size: 19px;
   }
 }
@@ -996,6 +996,69 @@ img {
   }
 }
 .houses__btn {
+  text-align: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.popular__inner {
+  position: relative;
+}
+.popular__inner::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-color: #eaebe6;
+  z-index: -1;
+}
+@media screen and (min-width: 600px) {
+  .popular__inner {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+}
+.popular__container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .popular__item {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .popular__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .popular__item {
+    -ms-flex-preferred-size: 23%;
+        flex-basis: 23%;
+  }
+}
+.popular__img {
+  height: 150px;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 960px) {
+  .popular__img {
+    height: 335px;
+  }
+}
+.popular__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular__btn {
   text-align: center;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;

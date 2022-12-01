@@ -19,5 +19,18 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
-    const so2 = new ScrollObserver('.cover-slide', _inviewAnimation);
+    const so2 = new ScrollObserver('.nav-trigger', _inviewAnimation);
+
+    const header = document.querySelector('.header');
+    const _navAnimation = function (el, inview) {
+        if(inview) {
+            header.classList.remove('triggeid');
+        } else {
+            header.classList.add('triggeid');
+        }
+    }
+
+    const so3 = new ScrollObserver('.nav-trigger', _navAnimation, {once:false});
+
+    new MobileMenu;
 });

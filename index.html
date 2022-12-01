@@ -20,6 +20,7 @@
     <div id="global-container">
         <div id="container">
             <div class="mobile-menu__cover"></div>
+            <div class="nav-trigger"></div>
             <header class="header">
                 <div class="header__inner">
                     <div class="logo">
@@ -27,15 +28,15 @@
                         <span class="logo__stay">Stay</span>
                         <span class="logo__world">World</span>
                     </div>
-                    <nav class="footer__nav">
-                        <ul class="footer__ul">
-                            <li class="footer__li">
+                    <nav class="header__nav">
+                        <ul class="header__ul">
+                            <li class="header__li">
                                 <a href="#">Service</a>
                             </li>
-                            <li class="footer__li">
+                            <li class="header__li">
                                 <a href="#">Company</a>
                             </li>
-                            <li class="footer__li">
+                            <li class="header__li">
                                 <a class="btn filled" href="#">Contact</a>
                             </li>
                         </ul>
@@ -229,6 +230,11 @@
         </div>
         <nav class="mobile-menu">
             <ul class="mobile-menu__main">
+                <div class="logo mobile-menu__item">
+                    <img src="images/logo.svg" alt="logo-image" class="logo-img">
+                    <span class="logo__stay">Stay</span>
+                    <span class="logo__world">World</span>
+                </div>
                 <li class="mobile-menu__item">
                     <a class="mobile-menu__link" href="#">
                         <span class="main-title">Our Service</span>
@@ -255,6 +261,7 @@
     <script src="scripts/libs/hero-slider.js"></script>
     <script src="scripts/vendors/scroll-polyfill.js"></script>
     <script src="scripts/libs/scroll.js"></script>
+    <script src="scripts/libs/mobile-menu.js"></script>
     <script src="scripts/libs/text-animation.js"></script>
     <script src="scripts/main.js"></script>
 </body>

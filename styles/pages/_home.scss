@@ -1,2 +1,28 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
+
+.houses{
+    @extend .content-width;
+    @extend .mb-lg;
+
+    &__inner{
+        @extend .flex;
+    }
+
+    &__title{
+        @extend .mb-sm;
+        @extend .font-lr;
+    }
+    &__item{
+        @include mq(md){
+            flex-basis: 50%;
+        }
+        @include mq(lg){
+            margin-bottom: 60px;
+        }
+    }
+    &__btn{
+        text-align: center;
+        flex-basis: 100%;
+    }
+}

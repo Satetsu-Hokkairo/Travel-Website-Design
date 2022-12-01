@@ -97,5 +97,6 @@ img {
 
 .sub-title {
   @extend .font-sm;
+  @extend .mb-sm;
   color: $cSubTitle;
 }

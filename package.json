@@ -1,0 +1,13 @@
+{
+  "name": "Travel-Website-Design",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Satetsu-Hokkairo/Travel-Website-Design.git",
+  "author": "Satetsu-Hokkairo <satetu.hokkairo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
+  }
+}

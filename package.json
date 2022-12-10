@@ -6,6 +6,7 @@
   "author": "Satetsu-Hokkairo <satetu.hokkairo@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.3",
     "gulp-imagemin": "^7.1.0",
@@ -13,5 +14,8 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.13"
   }
 }

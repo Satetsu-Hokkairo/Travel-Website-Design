@@ -21,6 +21,10 @@ $cMenuOpen: $cBlack;
     outline: none !important;
     cursor: pointer;
 
+    @include mq(lg){
+      display: none;
+    }
+
     & > span {
       background-color: $cMenuClose;
       width: 35px;
